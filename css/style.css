@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+body {
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+  background-color: wheat;
+}
+
+.illus img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
