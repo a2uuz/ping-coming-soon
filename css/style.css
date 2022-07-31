@@ -1,10 +1,157 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
   font-size: 20px;
   font-family: "Libre Franklin", sans-serif;
-  background-color: wheat;
+}
+
+main {
+  background-color: #fff;
+  text-align: center;
+  margin: 1rem;
+  padding: 2rem;
+}
+main .logo {
+  width: 25%;
+}
+main h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+main h2 span {
+  color: #969696;
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+main p {
+  font-size: small;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+form .emailInput,
+form .submitBtn {
+  width: 100%;
+}
+form Input,
+form .button {
+  padding: 0.5rem;
+}
+form input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #c2d3ff;
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.8rem;
+}
+form input::-moz-placeholder {
+  color: #4f7df3;
+  font-size: medium;
+}
+form input:-ms-input-placeholder {
+  color: #4f7df3;
+  font-size: medium;
+}
+form input::placeholder {
+  color: #4f7df3;
+  font-size: medium;
+}
+form i {
+  color: #ff5263;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+form .button {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background-color: #4f7df3;
+  color: #fff;
+  font-weight: 600;
+  font-size: medium;
+  border-radius: 2rem;
+  border: none;
+}
+form .button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .illus img {
   width: 100%;
+}
+
+footer {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #969696;
+}
+footer .icons {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: #4f7df3;
+}
+footer .icons .icon {
+  border: 1px #c2d3ff solid;
+  border-radius: 2rem;
+  width: 10px;
+  height: 10px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .icons .icon:hover {
+  background-color: #4f7df3;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  main,
+footer {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .logo {
+    max-width: 10%;
+  }
+  form {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .submitBtn {
+    align-self: baseline;
+  }
+  .illus img {
+    width: 60%;
+  }
+  .illus footer {
+    margin-bottom: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
