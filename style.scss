@@ -1,21 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
 
-$Blue: hsl(223, 87%, 63%);
-$Pale_Blue: hsl(223, 100%, 88%);
-$Light_Red: hsl(354, 100%, 66%);
-$Gray: hsl(0, 0%, 59%);
-$Very_Dark_Blue: hsl(209, 33%, 12%);
+$Blue: #4f7df3;
+$Pale_Blue: #c2d3ff;
+$Light_Red: #ff5263;
+$Gray: #969696;
+$Very_Dark_Blue: #151f29;
 $Fsize: 20px;
-$Ffamily: 'Libre Franklin', sans-serif;
+$Ffamily: "Libre Franklin", sans-serif;
 
-body{
-    font-size: $Fsize;
-    font-family: $Ffamily;
-    background-color: wheat;
+// MIXIN
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @content;
 }
 
-.illus{
-    img{
-        width: 100%;
+body {
+  @include flexCenter();
+  flex-direction: column;
+  height: 100vh;
+  font-size: $Fsize;
+  font-family: $Ffamily;
+}
+
+main {
+  background-color: #fff;
+  text-align: center;
+  margin: 1rem;
+  padding: 2rem;
+
+  .logo {
+    width: 25%;
+  }
+
+  h2 {
+    @include flexCenter();
+    gap: 0.5rem;
+    width: 100%;
+
+    span {
+      color: $Gray;
+      font-weight: 100;
+      font-size: 1.4rem;
     }
+  }
+
+  p {
+    font-size: small;
+  }
+}
+
+form {
+  @include flexCenter();
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+
+  .emailInput,
+  .submitBtn {
+    width: 100%;
+  }
+
+  Input,
+  .button {
+    padding: 0.5rem;
+  }
+
+  input {
+    width: 100%;
+    outline: none;
+    border: 1px solid $Pale_Blue;
+    border-radius: 2rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.8rem;
+
+    &::placeholder {
+      color: $Blue;
+      font-size: medium;
+      //   text-align: center;
+    }
+  }
+  i {
+    color: $Light_Red;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    display: none;
+  }
+  .button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background-color: $Blue;
+    color: #fff;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 2rem;
+    border: none;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}
+
+.illus {
+  img {
+    width: 100%;
+  }
+}
+
+footer {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: $Gray;
+  .icons {
+    margin-bottom: 1rem;
+    @include flexCenter();
+    gap: 1rem;
+    color: $Blue;
+
+    .icon {
+      border: 1px $Pale_Blue solid;
+      border-radius: 2rem;
+      width: 10px;
+      height: 10px;
+      padding: 0.5rem;
+      @include flexCenter();
+
+      &:hover {
+        background-color: $Blue;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    // height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  main,
+  footer {
+    margin: 1rem;
+    @include flexCenter();
+    flex-direction: column;
+  }
+  .logo{
+    max-width: 10%;
+  }
+
+  form {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .submitBtn {
+    align-self: baseline;
+  }
+
+  .illus {
+    img {
+      width: 60%;
+    }
+    footer{
+        margin-bottom: 2rem;
+    }
+  }
 }
