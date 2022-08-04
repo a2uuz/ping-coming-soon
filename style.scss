@@ -145,19 +145,34 @@ footer {
     justify-content: center;
     align-items: center;
   }
+
+  main {
+    h2 {
+      font-size: 2rem;
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
   main,
   footer {
     margin: 1rem;
     @include flexCenter();
     flex-direction: column;
   }
-  .logo{
-    max-width: 10%;
+  .logo {
+    max-width: 7%;
   }
 
   form {
     flex-direction: row;
-    gap: 3rem;
+    gap: 2.5rem;
+    .submitBtn {
+      width: 40%;
+    }
+    .emailInput {
+      width: 100%;
+    }
   }
 
   .submitBtn {
@@ -168,8 +183,8 @@ footer {
     img {
       width: 60%;
     }
-    footer{
-        margin-bottom: 2rem;
+    footer {
+      margin-bottom: 2rem;
     }
   }
 }

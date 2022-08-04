@@ -130,6 +130,12 @@ footer .icons .icon:hover {
     justify-content: center;
     align-items: center;
   }
+  main h2 {
+    font-size: 2rem;
+  }
+  main h2 span {
+    font-size: 2rem;
+  }
   main,
 footer {
     margin: 1rem;
@@ -139,11 +145,17 @@ footer {
     flex-direction: column;
   }
   .logo {
-    max-width: 10%;
+    max-width: 7%;
   }
   form {
     flex-direction: row;
-    gap: 3rem;
+    gap: 2.5rem;
+  }
+  form .submitBtn {
+    width: 40%;
+  }
+  form .emailInput {
+    width: 100%;
   }
   .submitBtn {
     align-self: baseline;
