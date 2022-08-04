@@ -4,6 +4,6 @@
 
 ## Welcome! 👋
  
-[Live Site](https://www.frontendmentor.io)
+[Live Site](https://a2uuz.github.io/ping-coming-soon/)
 
 **Thanks for checking out my work!** 🚀
